@@ -13,7 +13,7 @@ import Card from "react-bootstrap/Card";
 
 
 function LoginComponent(props) {
-    const { username, password, error, onUsernameChange, onPasswordChange, onLoginClick } = props;
+    const { username, password, error, onUsernameChange, onPasswordChange, onSubmitClick } = props;
     return(
        <>
        <AnonNavbarComponent />
@@ -38,7 +38,7 @@ function LoginComponent(props) {
                     <Form.Control type="password" placeholder="Password" onChange={onPasswordChange}
                        value={password} />
                   </Form.Group>
-                  <Button variant="primary" type="button" onClick={onLoginClick} id="submit" >
+                  <Button variant="primary" type="button" onClick={onSubmitClick} id="submit" >
                     Submit
                   </Button>{' '}
                   <Button variant="dark" href="/register">Register Here!!</Button>

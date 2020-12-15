@@ -5,13 +5,18 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
+import Breadcrumb from "react-bootstrap/Breadcrumb"
 
 
 
 function MyappoinmentComponent(props) {
     return(
        <>
-          <SecondNavbarComponent /><br /><br /><br />
+          <SecondNavbarComponent />
+          <Breadcrumb>
+            <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
+            <Breadcrumb.Item active>My Appoinments</Breadcrumb.Item>
+          </Breadcrumb>
           <Container>
             <Row>
               <Col>

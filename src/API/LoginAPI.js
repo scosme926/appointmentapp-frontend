@@ -1,41 +1,42 @@
 const REGISTER_KEY = "register_data";
 
-
-
 export function postLogin(postData, onSuccessCallbackFunc, onFailureCallbackFunc) {
-    // STEP 1: Get our TEXT data from "localStorage".
     let userArrayString = localStorage.getItem(REGISTER_KEY);
-    // STEP 2: If TEXT data is NULL then we need to create an empty array and
-    //         set the "localStorage" with our empty array.
-    if (userArrayString === null){
-      const emptyArray = [];
-      const emptyArrayString = JSON.stringify(emptyArray);
-      localStorage.setItem(REGISTER_KEY, emptyArrayString);
 
+    // If our data was not set, we need to set it here.
+    if (userArrayString === null) {
+        const emptyArray = [];
+        const emptyArrayString = JSON.stringify(emptyArray);
+        localStorage.setItem(REGISTER_KEY, emptyArrayString);
+        userArrayString = emptyArrayString;
     }
 
-
-    // STEP 3: We need to convert the TEXT to ARRAY.
+    // We need to convert the TEXT to ARRAY.
     const userArray = JSON.parse(userArrayString);
 
-    // STEP 4: Iterate through all the user accounts.
-    for (let obj of userArray){
-          // STEP 5: Find the matching username.
-      if (obj.username === postData.username){
-        // STEP 6: Match the password.
-
-        if (obj.password === postData.password){
-            // STEP 7: If username and password MATCH then call our "success callback function".
-            const responseData = {
-              message: "login success!!",
+    // Iterate through all the user accounts.
+    for (let userObj of userArray) {
+        // Find the matching username.
+        if (userObj.username === postData.username) {
+            // Match the password.
+            if (userObj.password === postData.password) {
+                const responseData = {
+                    message: "Login was a success",
+                }
+                onSuccessCallbackFunc(responseData);
+                return;
+            } else {
+                const responseData = {
+                    message: "Wrong password",
+                };
+                onFailureCallbackFunc(responseData);
+                return;
             }
-            onSuccessCallbackFunc(responseData);
         }
-      }
     }
-    // STEP 8: Else call our "failure callback function".
-    const responseData = {
-      message: "wrong password or username"
-    }
+
+    const responseData ={
+        message: "No user account found with the username",
+    };
     onFailureCallbackFunc(responseData);
 }

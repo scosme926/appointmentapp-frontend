@@ -7,6 +7,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import Lista from "../Img/Lista.jpg"
+import Contact from "../Img/Contact us.jpg"
+import Calendario from "../Img/Calendario.jpg"
 
 
 
@@ -16,10 +19,10 @@ function DashComponent(props) {
         <SecondNavbarComponent /><br /><br /><br />
         <Container>
           <Row>
-            <CardDeck>
+            <CardDeck style={{display: 'flex', flexDirection: 'row'}} className="Dashboard-Container">
               <Col>
-                <Card>
-                  <Card.Img variant="top" src="https://cdn5.dibujos.net/dibujos/pintados/202020/un-libro-abierto-colegio-11788058.jpg" />
+                <Card style={{flex: 1}}>
+                  <Card.Img variant="top" src={Lista} />
                   <Card.Body>
                     <Card.Title>My Appoinments</Card.Title>
                     <Card.Text>
@@ -30,26 +33,26 @@ function DashComponent(props) {
                 </Card>
                 </Col>
                 <Col>
-                <Card>
-                  <Card.Img variant="top" src="https://img.freepik.com/vector-gratis/fecha-limite-calendario-reloj-diseno-plano_115464-601.jpg?size=626&ext=jpg" />
+                <Card style={{flex: 1}}>
+                  <Card.Img variant="top" src={Calendario} />
                   <Card.Body>
-                    <Card.Title>Calendar</Card.Title>
+                    <Card.Title>Set An Appoinment</Card.Title>
                     <Card.Text>
                       Select the best day and time for your new look.
                     </Card.Text>
-                    <Button variant="primary" href="/calendar">Calendar</Button>
+                    <Button variant="primary" href="/set-an-appoinment-step-1">Set An Appoinment</Button>
                   </Card.Body>
                 </Card>
                 </Col>
                 <Col>
-                <Card>
-                  <Card.Img variant="top" src="https://image.freepik.com/vector-gratis/muestra-fondo-dibujado-mano-informacion-contacto_23-2148190270.jpg" />
+                <Card style={{flex: 1}}>
+                  <Card.Img variant="top" src={Contact} />
                   <Card.Body>
                     <Card.Title>Contact Us</Card.Title>
                     <Card.Text>
                       If you have any doubts or questions, do not hesitate to contact us.
                     </Card.Text>
-                    <Button variant="primary" href="/myappoinment">Contact Us</Button>
+                    <Button variant="primary" href="contact-us">Contact Us</Button>
                   </Card.Body>
                 </Card>
               </Col>
