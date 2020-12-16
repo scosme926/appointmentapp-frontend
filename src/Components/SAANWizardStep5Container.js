@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import SAANWizardStep5Component from "./SAANWizardStep5Component";
+import {postCreateAppointment} from "../API/AppointmentAPI";
 
 class SAANWizardStep5Container extends Component{
   constructor(props) {
@@ -11,6 +12,25 @@ class SAANWizardStep5Container extends Component{
       pickedFirstName:localStorage.getItem("PickedFirstName"),
       pickedEmail: localStorage.getItem("PickedEmail"),
     }
+    this.onSubmitClick=this.onSubmitClick.bind(this);
+    this.onSuccessCallbackFunc=this.onSuccessCallbackFunc.bind(this);
+    this.onFailureCallbackFunc=this.onFailureCallbackFunc.bind(this);
+  }
+
+  onSubmitClick(e) {
+    postCreateAppointment(this.state,this.onSuccessCallbackFunc,this.onFailureCallbackFunc);
+
+  }
+
+  onSuccessCallbackFunc(e) {
+    alert("Appoinment Set");
+    this.props.history.push("/myappoinment");
+
+  }
+
+  onFailureCallbackFunc(e) {
+    alert("Appoinment Fail")
+
   }
 
   render(){
@@ -23,6 +43,7 @@ class SAANWizardStep5Container extends Component{
           pickedTime={pickedTime}
           pickedFirstName={pickedFirstName}
           pickedEmail={pickedEmail}
+          onSubmitClick={this.onSubmitClick}
         />
       </>
     )

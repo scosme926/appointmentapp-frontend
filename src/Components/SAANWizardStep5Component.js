@@ -27,7 +27,7 @@ import Form from "react-bootstrap/Form";
 
 
 function SAANWizardStep5Component(props) {
-    const { onClickSelectButton, pickedDate, pickedType, pickedTime, pickedFirstName, pickedEmail, pickedLastName, }=props;
+    const { onClickSelectButton, pickedDate, pickedType, pickedTime, pickedFirstName, pickedEmail, pickedLastName, onSubmitClick }=props;
 
 
     return(
@@ -109,7 +109,7 @@ function SAANWizardStep5Component(props) {
               <Col sm={3}>
               </Col>
               <Col sm={6} style={{textAlign: "center"}}>
-                <Button variant="primary" href="/set-an-appoinment-step-5">Submit</Button><br /><br />
+                <Button variant="primary" onClick={onSubmitClick}>Submit</Button><br /><br />
               </Col>
               <Col sm={3}>
               </Col>

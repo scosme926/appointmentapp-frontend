@@ -7,11 +7,35 @@ import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 import Breadcrumb from "react-bootstrap/Breadcrumb"
 import Button from "react-bootstrap/Button";
+import { enGB } from 'date-fns/locale'
+import { format } from 'date-fns'
 
+
+
+function AppointmentItem(props) {
+    const { pickedDate, pickedType, pickedTime, id}= props.item;
+    const pickedDateObj=new Date(pickedDate);
+    return (
+        <tr key={id}>
+           <td>{pickedDateObj && format(pickedDateObj, 'dd MMM yyyy', { locale: enGB })}</td>
+           <td>{pickedTime}</td>
+           <td>{pickedType}</td>
+           <td>
+               <Link to={`/myappoinment/${id}`}>View</Link>
+           </td>
+        </tr>
+    );
+}
 
 
 
 function MyappoinmentComponent(props) {
+  function renderRow(item) {
+        return <AppointmentItem item={item} />;
+    }
+
+    const { appointmentsArray }=props;
+    console.log("MyappoinmentComponent|appointmentsArray", appointmentsArray)
     return(
        <>
           <SecondNavbarComponent />
@@ -32,24 +56,11 @@ function MyappoinmentComponent(props) {
                       <th>Date</th>
                       <th>Time</th>
                       <th>Service</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>11/09/2019</td>
-                      <td>11:30 am</td>
-                      <td>Colour Hair</td>
-                    </tr>
-                    <tr>
-                      <td>11/01/2020</td>
-                      <td>3:30 pm</td>
-                      <td>Hair Cut</td>
-                    </tr>
-                    <tr>
-                      <td>01/02/2020</td>
-                      <td>12:30 pm</td>
-                      <td>Hair Cut</td>
-                    </tr>
+                    {appointmentsArray.map(renderRow)}
                   </tbody>
                 </Table>
               </Col>

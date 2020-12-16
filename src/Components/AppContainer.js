@@ -12,6 +12,7 @@ import SAANWizardStep3Container from "./SAANWizardStep3Container"
 import SAANWizardStep4Container from "./SAANWizardStep4Container"
 import SAANWizardStep5Container from "./SAANWizardStep5Container"
 import ContactContainer from "./ContactContainer"
+import MyappointmentDetailContainer from "./MyappointmentDetailContainer"
 
 
 
@@ -31,7 +32,7 @@ class AppContainer extends Component {
                 <Route path="/set-an-appoinment-step-4" exact component={SAANWizardStep4Container} />
                 <Route path="/set-an-appoinment-step-5" exact component={SAANWizardStep5Container} />
                 <Route path="/contact-us" exact component={ContactContainer} />
-
+                <Route path="/myappoinment/:id"exact component={MyappointmentDetailContainer} />
 
 
 
