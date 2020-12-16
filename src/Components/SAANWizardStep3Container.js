@@ -9,8 +9,9 @@ class SAANWizardStep3Container extends Component{
     this.onClickSelectButton = this.onClickSelectButton.bind(this);
   }
 
-  onClickSelectButton(e) {
-    console.log(e);
+  onClickSelectButton(e,pickedTime) {
+    console.log(pickedTime);
+    localStorage.setItem("PickedTime", pickedTime);
     this.props.history.push("/set-an-appoinment-step-4")
   }
   render(){

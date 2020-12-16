@@ -27,6 +27,7 @@ import Form from "react-bootstrap/Form";
 
 
 function SAANWizardStep4Component(props) {
+    const { firstName, lastName, email, phone, onFirstnameChange, onLastnameChange, onEmailChange, onPhoneChange }=props
     return(
        <>
           <SecondNavbarComponent />
@@ -42,52 +43,52 @@ function SAANWizardStep4Component(props) {
           </Row>
           <br />
             <Row>
-              <Col>
+              <Col style={{textAlign: "center"}}>
                 <h1>Step 4: Consumer Information</h1>
                 <p>Please enter the consumer information</p>
               </Col>
             </Row>
             <br />
             <Row>
-              <Col xs="8">
+              <Col sm={2}>
+              </Col>
+              <Col sm={8}>
                 <Form>
                   <Form.Row>
                     <Form.Group as={Col} controlId="formGridName">
                       <Form.Label>Name</Form.Label>
-                      <Form.Control type="text" placeholder="Enter name" />
+                      <Form.Control type="text" placeholder="Enter name" value={firstName} onChange={onFirstnameChange} />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridLastname">
                       <Form.Label>Last Name</Form.Label>
-                      <Form.Control type="text" placeholder="Enter last name" />
+                      <Form.Control type="text" placeholder="Enter last name" value={lastName} onChange={onLastnameChange} />
                     </Form.Group>
                   </Form.Row>
                 </Form>
               </Col>
-              <Col style={{textAlign: "center"}}>
-
-                <Button variant="primary" size="lg" >
-                  Pay Here!!!
-                </Button>
+              <Col sm={2}>
               </Col>
             </Row>
             <Row>
-              <Col xs="8">
+            <Col sm={2}>
+            </Col>
+              <Col sm={8}>
                 <Form>
                   <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                       <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" placeholder="Enter email" />
+                      <Form.Control type="email" placeholder="Enter email" value={email} onChange={onEmailChange}/>
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPhone">
                       <Form.Label>Phone number</Form.Label>
-                      <Form.Control type="number" placeholder="Enter phone " />
+                      <Form.Control type="number" placeholder="Enter phone " value={phone} onChange={onPhoneChange} />
                     </Form.Group>
                   </Form.Row>
                 </Form>
               </Col>
-              <Col>
+              <Col sm={2}>
               </Col>
             </Row>
             <br />

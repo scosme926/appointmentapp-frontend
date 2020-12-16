@@ -7,16 +7,22 @@ class SAANWizardStep5Container extends Component{
     this.state={
       pickedDate: new Date(localStorage.getItem("PickedDate")),
       pickedType: localStorage.getItem("PickedType"),
+      pickedTime: localStorage.getItem("PickedTime"),
+      pickedFirstName:localStorage.getItem("PickedFirstName"),
+      pickedEmail: localStorage.getItem("PickedEmail"),
     }
   }
 
   render(){
-    const {pickedDate, pickedType} =this.state;
+    const {pickedDate, pickedType, pickedTime, pickedFirstName, pickedEmail} =this.state;
     return(
       <>
         <SAANWizardStep5Component
           pickedDate={pickedDate}
           pickedType={pickedType}
+          pickedTime={pickedTime}
+          pickedFirstName={pickedFirstName}
+          pickedEmail={pickedEmail}
         />
       </>
     )

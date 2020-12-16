@@ -6,19 +6,19 @@ class SAANWizardStep2Container extends Component{
     super(props);
     this.state={
     }
-    this.onClickDropButton = this.onClickDropButton.bind(this);
+    this.onClickSelectButton = this.onClickSelectButton.bind(this);
   }
 
-  onClickDropButton(value) {
-    console.log(value);
-    localStorage.setItem("PickedType", value);
+  onClickSelectButton(e,pickedType) {
+    console.log(pickedType);
+    localStorage.setItem("PickedType", pickedType);
     this.props.history.push("/set-an-appoinment-step-3")
   }
   render(){
     return(
       <>
         <SAANWizardStep2Component
-            onClickDropButton={this.onClickDropButton}
+            onClickSelectButton={this.onClickSelectButton}
         />
       </>
     )

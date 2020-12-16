@@ -17,13 +17,17 @@ import Dropdown from "react-bootstrap/Dropdown"
 import ProgressBar from "react-bootstrap/ProgressBar"
 import ProgressBarStep2Component from "./ProgressBarStep2Component"
 import Card from "react-bootstrap/Card";
+import Step1 from "../Img/Step-2.jpg";
+import Step3 from "../Img/Step-3.jpg";
+import Step4 from "../Img/Step-4.jpg";
+
 
 
 
 
 
 function SAANWizardStep2Component(props) {
-    const { onClickDropButton }=props;
+    const { onClickSelectButton }=props;
     return(
        <>
           <SecondNavbarComponent />
@@ -46,52 +50,33 @@ function SAANWizardStep2Component(props) {
             </Row>
             <br />
             <Row>
-              <Col>
-              <DropdownButton id="dropdown-basic-button" onSelect={onClickDropButton} title="Select a Type">
-                <Dropdown.Item eventKey="Hair Color">Hair Color</Dropdown.Item>
-                <Dropdown.Item eventKey="Hair Style">Hair Style</Dropdown.Item>
-                <Dropdown.Item eventKey="Hair Cut">Hair Cut</Dropdown.Item>
-              </DropdownButton>
+              <Col style={{textAlign: "center"}}>
+                <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src={Step1} />
+                  <Card.Body>
+                    <Card.Title>Hair Style</Card.Title>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"Hair Style")}>Select</Button>
+                  </Card.Body>
+                </Card>
               </Col>
-              <Col>
-              <Card>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Col style={{textAlign: "center"}}>
+                <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src={Step3} />
+                  <Card.Body>
+                    <Card.Title>Hair Cut</Card.Title>
+                    <Button variant="primary"onClick={(event)=>onClickSelectButton(event,"Hair Cut")}>Select</Button>
+                  </Card.Body>
+                </Card>
               </Col>
-              <Col>
-              <Card>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Col style={{textAlign: "center"}} >
+                <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src={Step4} />
+                  <Card.Body>
+                    <Card.Title>Hair Color</Card.Title>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"Hair Color")}>Select</Button>
+                  </Card.Body>
+                </Card>
               </Col>
-            </Row>
-            <Row>
-            <Col sm={6}>
-            </Col>
-            <Col sm={4} style={{textAlign: "center"}}>
-            <Card>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            </Col>
-            <Col sm={3}>
-            </Col>
             </Row>
             <Row>
               <Col>

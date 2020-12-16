@@ -27,7 +27,7 @@ import Form from "react-bootstrap/Form";
 
 
 function SAANWizardStep5Component(props) {
-    const { onClickSelectButton, pickedDate, pickedType }=props;
+    const { onClickSelectButton, pickedDate, pickedType, pickedTime, pickedFirstName, pickedEmail, pickedLastName, }=props;
 
 
     return(
@@ -43,7 +43,6 @@ function SAANWizardStep5Component(props) {
               <ProgressBarStep5Component  />
             </Col>
           </Row>
-          <br />
             <Row>
               <Col style={{textAlign: "center"}}>
                 <h1>Step 5: Review Your Appoinment</h1>
@@ -58,6 +57,14 @@ function SAANWizardStep5Component(props) {
                 <Card.Title style={{textAlign: "center"}}>Confirm Your Appoinment</Card.Title>
                 <Card.Body>
                 <Form>
+                <Form.Group as={Row} controlId="formPlaintextEmail">
+                  <Form.Label column sm="2">
+                    Name:
+                  </Form.Label>
+                  <Col sm="10">
+                    <Form.Control plaintext readOnly defaultValue={pickedFirstName} />
+                  </Col>
+                </Form.Group>
                   <Form.Group as={Row} controlId="formPlaintextEmail">
                     <Form.Label column sm="2">
                       Date:
@@ -79,12 +86,30 @@ function SAANWizardStep5Component(props) {
                       Time:
                     </Form.Label>
                     <Col sm="10">
-                      <Form.Control plaintext readOnly defaultValue="" />
+                      <Form.Control plaintext readOnly defaultValue={pickedTime} />
                     </Col>
                   </Form.Group>
+                    <Form.Group as={Row} controlId="formPlaintextEmail">
+                      <Form.Label column sm="2">
+                        Email:
+                      </Form.Label>
+                      <Col sm="10">
+                        <Form.Control plaintext readOnly defaultValue={pickedEmail} />
+                      </Col>
+                    </Form.Group>
                   </Form>
                 </Card.Body>
                 </Card>
+              </Col>
+              <Col sm={3}>
+              </Col>
+            </Row>
+            <br />
+            <Row>
+              <Col sm={3}>
+              </Col>
+              <Col sm={6} style={{textAlign: "center"}}>
+                <Button variant="primary" href="/set-an-appoinment-step-5">Submit</Button><br /><br />
               </Col>
               <Col sm={3}>
               </Col>

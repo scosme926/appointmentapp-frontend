@@ -16,22 +16,22 @@ function ProgressBarStep1Component(props) {
        </Nav.Link>
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link href="/set-an-appoinment-step-2" >
+       <Nav.Link eventKey="disabled" disabled >
          Step 2
        </Nav.Link>
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link href="/set-an-appoinment-step-3" >
+       <Nav.Link eventKey="disabled" disabled >
          Step 3
        </Nav.Link >
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link href="/set-an-appoinment-step-4" >
+       <Nav.Link eventKey="disabled" disabled >
          Step 4
        </Nav.Link >
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link  href="/set-an-appoinment-step-5">
+       <Nav.Link  eventKey="disabled" disabled>
          Step 5
        </Nav.Link>
      </Nav.Item>
