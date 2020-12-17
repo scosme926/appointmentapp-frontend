@@ -45,7 +45,7 @@ function SAANWizardStep5Component(props) {
           </Row>
             <Row>
               <Col style={{textAlign: "center"}}>
-                <h1>Step 5: Review Your Appoinment</h1>
+                <h1>Step 5: Review Your Appointment</h1>
               </Col>
             </Row>
             <br />
@@ -54,7 +54,7 @@ function SAANWizardStep5Component(props) {
             </Col>
               <Col sm={6}>
                 <Card>
-                <Card.Title style={{textAlign: "center"}}>Confirm Your Appoinment</Card.Title>
+                <Card.Title style={{textAlign: "center"}}>Confirm Your Appointment</Card.Title>
                 <Card.Body>
                 <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">

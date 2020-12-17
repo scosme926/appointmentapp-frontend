@@ -31,7 +31,7 @@ function SAANWizardStep3Component(props) {
           <SecondNavbarComponent />
           <Breadcrumb>
             <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
-            <Breadcrumb.Item active>Schedule Your Appoinment</Breadcrumb.Item>
+            <Breadcrumb.Item active>Schedule Your Appointment</Breadcrumb.Item>
           </Breadcrumb>
           <Container>
           <Row>
@@ -49,7 +49,7 @@ function SAANWizardStep3Component(props) {
               <Col>
               </Col>
               <Col xs="8">
-                <h3>Schedule Your Appoinment</h3>
+                <h3>Schedule Your Appointment</h3>
               </Col>
               <Col>
               </Col>
@@ -85,9 +85,9 @@ function SAANWizardStep3Component(props) {
                     <Card.Title>Morning</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                     <Card.Text>
-                      <strong>Hour:</strong> 9:30pm
+                      <strong>Hour:</strong> 9:30am
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"9:30am")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -97,9 +97,9 @@ function SAANWizardStep3Component(props) {
                     <Card.Title>Morning</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                     <Card.Text>
-                      <strong>Hour:</strong> 10:30pm
+                      <strong>Hour:</strong> 10:30am
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"10:30am")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col><Col >
@@ -108,9 +108,9 @@ function SAANWizardStep3Component(props) {
                     <Card.Title>Morning</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
                     <Card.Text>
-                      <strong>Hour:</strong> 11:30pm
+                      <strong>Hour:</strong> 11:30am
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"11:30am")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -125,7 +125,7 @@ function SAANWizardStep3Component(props) {
                     <Card.Text>
                       <strong>Hour:</strong> 12:30pm
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"12:30pm")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -137,7 +137,7 @@ function SAANWizardStep3Component(props) {
                     <Card.Text>
                       <strong>Hour:</strong> 1:30pm
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"1:30pm")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col><Col >
@@ -148,7 +148,7 @@ function SAANWizardStep3Component(props) {
                     <Card.Text>
                       <strong>Hour:</strong> 2:30pm
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"2:30pm")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col><Col >
@@ -159,7 +159,7 @@ function SAANWizardStep3Component(props) {
                     <Card.Text>
                       <strong>Hour:</strong> 3:30pm
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"3:30pm")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -171,7 +171,7 @@ function SAANWizardStep3Component(props) {
                     <Card.Text>
                       <strong>Hour:</strong> 4:30pm
                     </Card.Text>
-                    <Button variant="primary" onClick={onClickSelectButton}>Select</Button>
+                    <Button variant="primary" onClick={(event)=>onClickSelectButton(event,"4:30pm")}>Select</Button>
                   </Card.Body>
                 </Card>
               </Col>
