@@ -24,7 +24,7 @@ class MyappoinmentContainer extends Component{
   }
 
   onFailureCallbackFunc(responseData) {
-    console.log(responseData);
+    console.log(responseData)
   }
 
 

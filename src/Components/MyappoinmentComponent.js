@@ -41,14 +41,14 @@ function MyappoinmentComponent(props) {
           <SecondNavbarComponent />
           <Breadcrumb>
             <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
-            <Breadcrumb.Item active>My Appoinments</Breadcrumb.Item>
+            <Breadcrumb.Item active>My Appointments</Breadcrumb.Item>
           </Breadcrumb>
           <Container>
             <Row>
               <Col sm={2}>
               </Col >
               <Col sm={8} style={{textAlign: "center"}}>
-                <h1>Track your Appoinments</h1>
+                <h1>Track your Appointments</h1>
                 <br />
                 <Table striped bordered hover size="">
                   <thead>

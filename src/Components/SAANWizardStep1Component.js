@@ -24,7 +24,7 @@ function SAANWizardStep1Component(props) {
           <SecondNavbarComponent />
           <Breadcrumb>
             <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
-            <Breadcrumb.Item active>Set an Appoinment</Breadcrumb.Item>
+            <Breadcrumb.Item active>Set an Appointment</Breadcrumb.Item>
           </Breadcrumb>
           <Container>
           <Row>
@@ -34,7 +34,7 @@ function SAANWizardStep1Component(props) {
           </Row>
             <Row>
               <Col>
-                <h1>Step 1: Set An Appoinment</h1>
+                <h1>Step 1: Set An Appointment</h1>
                 <p>To set an appoinment, please begin by clicking on a date that you would like the appoinment to take place</p>
                 <p>The selected date is: {date && format(date, 'dd MMM yyyy', { locale: enGB })}</p>
               </Col>

@@ -17,8 +17,8 @@ function SecondNavbarComponent(props) {
         </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-          <Nav.Link href="/myappoinment">My Appoinments</Nav.Link>
-          <Nav.Link href="/set-an-appoinment-step-1">Set an Appoinment</Nav.Link>
+          <Nav.Link href="/myappoinment">My Appointments</Nav.Link>
+          <Nav.Link href="/set-an-appoinment-step-1">Set an Appointment</Nav.Link>
           <Nav.Link href="/contact-us">Contact Us</Nav.Link>
           <Nav.Link href="/">Logout</Nav.Link>
 

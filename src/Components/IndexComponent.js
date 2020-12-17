@@ -23,7 +23,7 @@ function IndexComponent(props) {
           <AnonNavbarComponent />
 
                  <Carousel>
-                  <Carousel.Item interval={5000}>
+                  <Carousel.Item interval={10000}>
                     <img
                       className="d-block w-100"
                       src={Index1}
