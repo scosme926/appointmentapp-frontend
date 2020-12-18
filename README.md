@@ -4,5 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-
-{{< figure src="/src/Img/Doris1.PNG" width="800" height="400"  >}}
+<img src="/src/Img/Doris1.PNG" width="800" height="400">
